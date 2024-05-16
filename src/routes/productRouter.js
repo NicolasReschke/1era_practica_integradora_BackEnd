@@ -72,6 +72,7 @@ router.post('/api/addProduct', async (req, res) => {
     }
 })
 
+//PUT para Postman:
 router.put('/api/products/:pid', async (req, res) => {
     let { pid } = req.params
     let productToReplace = req.body
