@@ -28,6 +28,7 @@ router.get('/api/products/:pid', async (req, res) => {
     }
 })
 
+//Post para Postman:
 router.post('/api/products', async (req, res) => {
     let { title, description, code, price, stock, category, thumbnail} = req.body
     console.log(req.body)
@@ -104,6 +105,7 @@ router.post('/api/products/update/:pid', async (req, res) => {
     }
 })
 
+//Delete para Postman:
 router.delete('/api/products/:pid', async (req, res) => {
     let { pid } = req.params
     let result = await productModel.deleteOne({ _id: pid })

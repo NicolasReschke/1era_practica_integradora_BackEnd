@@ -1,13 +1,14 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import handlebars from 'express-handlebars';
-import __dirname from './utils.js';
 import dotenv from 'dotenv'
 
+import __dirname from './utils.js';
 import userRouter from './routes/userRouter.js'
 import productRouter from './routes/productRouter.js'
 import chatRouter from './routes/chatRouter.js'
 import cartRouter from './routes/cartRouter.js'
+import indexRouter from './routes/indexRouter.js'
 
 dotenv.config()
 console.log(process.env.MONGO_URL)
@@ -31,6 +32,7 @@ app.use('/', userRouter)
 app.use('/', productRouter)
 app.use('/', chatRouter)
 app.use('/', cartRouter)
+app.use('/', indexRouter)
 
 app.listen(PORT, () =>{
     console.log(`Server is running on port ${PORT}`)

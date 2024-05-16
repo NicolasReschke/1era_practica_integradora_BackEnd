@@ -1,0 +1,74 @@
+<style>
+    .navbar-nav{
+        align-items: center;
+    }
+    .navbar-dark .navbar-nav .nav-link:hover{
+        color: goldenrod;
+    }
+
+    .navbar-nav{
+        a{
+            img{
+                max-width: 100px;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    .navbar-collapse{
+        justify-content: space-between;
+    }
+    .container-fluid{
+        max-width: 1140px;
+    }
+    .navbar-brand{
+        img{
+            border-radius: 10px;
+        }
+    }
+</style>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+            
+                <!-- icono -->
+                <a class="navbar-brand" href="https://entrega-final-react-js-reschkenicolas.netlify.app/" target="_blank">
+                    <img src="https://entrega-final-react-js-reschkenicolas.netlify.app/assets/LOGO1-71558ef6.jpg" width="50px" alt="logo del vivero juan jose con fondo celeste adornado con cactus">
+                </a>
+                
+                <!-- boton del menu -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#botonmenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- elementos del menu colapsable -->
+                <div class="collapse navbar-collapse" id="botonmenu">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/">INICIO</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUCTOS</a>
+                            <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdown">
+                                <li>
+                                    <a class="dropdown-item" href="/api/products">Ver todos</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="/api/addProduct">Agregar uno...</a>
+                                </li>
+                            </ul>
+                        </li>
+                        {{!-- <li class="nav-item">
+                            <a class="nav-link" href="/api/carts">COMPRAS</a>
+                        </li> --}}
+                    </ul>
+
+                    <hr class="d-md-none text-white-50">
+
+                    <!-- mercadoshops -->
+                    <ul class="navbar-nav flex-wrap">
+                        <a href="/chat"><img src="https://vivero-juanjose.netlify.app/img/iconowhatsapp48x48.svg" alt="logo de mercadoshops"></a>
+                    </ul>
+                </div>
+            </div>  
+        </nav>
