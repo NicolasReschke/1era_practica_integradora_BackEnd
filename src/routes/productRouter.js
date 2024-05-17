@@ -6,7 +6,10 @@ const router = Router()
 router.get('/api/products', async (req, res) => {
     try {
         const products = await productModel.find().lean()
-        res.render('home', { products })
+        res.render('home',{
+            style:'style.css',
+            products: products
+        })
     } catch (error) {
         console.error('Error al cargar la página de productos:', error)
         res.status(500).render('error', { message: 'Error al cargar la página de prouctos.' })
@@ -43,7 +46,9 @@ router.post('/api/products', async (req, res) => {
 })
 
 router.get('/api/addProduct', (req, res) => {
-    res.render('addProduct')
+    res.render('addProduct',{
+        style:'style.css'
+    })
 })
 
 router.post('/api/addProduct', async (req, res) => {

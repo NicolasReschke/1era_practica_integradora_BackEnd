@@ -7,7 +7,10 @@ const router = Router()
 router.get('/chat', async (req, res) => {
     try {
         const messages = await messageModel.find().lean()
-        res.render('chat', { messages })
+        res.render('chat',{
+            style:'style.css',
+            messages : messages
+        })
     } catch (error) {
         console.error('Error al cargar los mensajes:', error)
         res.status(500).render('error', { message: 'Error al cargar el chat, imagino' })

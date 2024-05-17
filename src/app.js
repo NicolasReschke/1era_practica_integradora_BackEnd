@@ -22,6 +22,7 @@ app.set('view engine', 'handlebars')
 
 app.use(express.json())
 app.use(express.urlencoded({ extended : true }))
+app.use(express.static(__dirname + "/public"))
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => {
